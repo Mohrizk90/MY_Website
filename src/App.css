@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  text-align: center;
+  color: white;
+}
+
+.loading-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.loading-content p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Smooth scrolling for the entire app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section spacing */
+section {
+  padding: 80px 0;
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+} 
