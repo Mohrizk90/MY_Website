@@ -17,10 +17,52 @@ const Skills = () => {
     { name: 'Embedded Systems', percentage: 80 }
   ];
 
-  const programmingTools = [
-    'Python', 'R', 'SQL', 'Java', 'C++', 'C',
-    'TensorFlow', 'PyTorch', 'OpenCV', 'React.js',
-    'Git', 'AWS', 'Scikit-learn', 'Keras'
+  const programmingLanguages = [
+    'Python', 'R', 'SQL', 'Java', 'C++', 'C'
+  ];
+
+  const webDevelopment = [
+    'React.js', 'Node.js', 'Express.js', 'React Router', 'i18next', 'CSS3'
+  ];
+
+  const databasesAndAPIs = [
+    'MongoDB', 'Mongoose', 'RESTful APIs', 'Google Drive API', 'Cloud Storage'
+  ];
+
+  const securityAndAuth = [
+    'JWT', 'bcrypt', 'CORS configuration'
+  ];
+
+  const devopsAndTools = [
+    'Docker', 'Git', 'Multer', 'JSON/CSV handling', 'Streamlit'
+  ];
+
+  const machineLearning = [
+    'Scikit-learn', 'TensorFlow', 'PyTorch', 'Keras'
+  ];
+
+  const deepLearning = [
+    'Neural Networks', 'CNNs', 'RNNs', 'TTS'
+  ];
+
+  const nlp = [
+    'Whisper ASR', 'Arabic text comparison', 'RAG', 'LLMs'
+  ];
+
+  const computerVision = [
+    'OpenCV', 'TensorFlow/Keras', 'PyTorch'
+  ];
+
+  const dataVisualization = [
+    'Matplotlib', 'Seaborn'
+  ];
+
+  const audioProcessing = [
+    'Silence detection', 'real-time transcription', 'Voice Activity Detection (VAD)'
+  ];
+
+  const otherSkills = [
+    'Strong math & statistics', 'critical thinking', 'teamwork', 'leadership'
   ];
 
   return (
@@ -72,15 +114,153 @@ const Skills = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3>Programming & Tools</h3>
+            <h3>Programming Languages</h3>
             <div className="skill-tags">
-              {programmingTools.map((tool, index) => (
+              {programmingLanguages.map((tool, index) => (
                 <motion.span
                   key={tool}
                   className="skill-tag"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {tool}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="skill-category"
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <h3>Web Development</h3>
+            <div className="skill-tags">
+              {webDevelopment.map((tool, index) => (
+                <motion.span
+                  key={tool}
+                  className="skill-tag"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.3, delay: 0.8 + index * 0.05 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {tool}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="skill-category"
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <h3>Machine Learning</h3>
+            <div className="skill-tags">
+              {machineLearning.map((tool, index) => (
+                <motion.span
+                  key={tool}
+                  className="skill-tag"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.3, delay: 1.0 + index * 0.05 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {tool}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="skill-category"
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.0 }}
+          >
+            <h3>Deep Learning</h3>
+            <div className="skill-tags">
+              {deepLearning.map((tool, index) => (
+                <motion.span
+                  key={tool}
+                  className="skill-tag"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.3, delay: 1.2 + index * 0.05 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {tool}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="skill-category"
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.2 }}
+          >
+            <h3>NLP & Computer Vision</h3>
+            <div className="skill-tags">
+              {[...nlp, ...computerVision].map((tool, index) => (
+                <motion.span
+                  key={tool}
+                  className="skill-tag"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.3, delay: 1.4 + index * 0.05 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {tool}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="skill-category"
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.4 }}
+          >
+            <h3>DevOps & Tools</h3>
+            <div className="skill-tags">
+              {devopsAndTools.map((tool, index) => (
+                <motion.span
+                  key={tool}
+                  className="skill-tag"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.3, delay: 1.6 + index * 0.05 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {tool}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="skill-category"
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.6 }}
+          >
+            <h3>Other Skills</h3>
+            <div className="skill-tags">
+              {otherSkills.map((tool, index) => (
+                <motion.span
+                  key={tool}
+                  className="skill-tag"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.3, delay: 1.8 + index * 0.05 }}
                   whileHover={{ scale: 1.1 }}
                 >
                   {tool}

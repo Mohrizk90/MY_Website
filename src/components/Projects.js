@@ -12,17 +12,10 @@ const Projects = () => {
   const projects = [
     {
       title: 'Quran Recitation Assistant using AI',
-      status: 'Production Ready',
-      description: 'AI-powered educational application that assists users in improving Quran recitation through real-time transcription and feedback. Uses Whisper ASR, Python, TTS, OpenRouter LLM, and RAG for comprehensive learning support.',
-      technologies: ['Whisper ASR', 'Python', 'TTS', 'LLM', 'RAG'],
+      status: 'A Grade',
+      description: 'Built an AI-powered application with Whisper ASR, Python, RAG, and LLMs for real-time Quran recitation feedback. Integrated silence detection, Arabic TTS, and interactive UI (Streamlit → React).',
+      technologies: ['Whisper ASR', 'Python', 'RAG', 'LLMs', 'Arabic TTS', 'Streamlit', 'React'],
       icon: FaBrain
-    },
-    {
-      title: 'Facial Emotion Recognition System',
-      status: 'Deployed',
-      description: 'Fine-tuned model on FER2013 dataset using Computer Vision techniques to overcome dataset challenges. Developed a user interface for easy image upload and emotion detection with deployment capabilities.',
-      technologies: ['Computer Vision', 'Deep Learning', 'FER2013', 'UI/UX'],
-      icon: FaSmile
     }
   ];
 

@@ -22,7 +22,7 @@ const Hero = memo(() => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Hi, I'm <span className="highlight">Mohamed Yasser</span>
+              Hi, I'm <span className="highlight">Mohamed Rizk</span>
             </motion.h1>
             
             <motion.p
@@ -31,7 +31,7 @@ const Hero = memo(() => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Software Engineer & AI Developer
+              Computer Engineer & AI Specialist
             </motion.p>
             
             <motion.p
@@ -40,7 +40,7 @@ const Hero = memo(() => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              A passionate Software Engineer with expertise in AI, Machine Learning, and Full-Stack Development. 
+              A passionate Computer Engineer with expertise in AI, Machine Learning, and Full-Stack Development. 
               Dedicated to building innovative solutions and delivering high-quality software products.
             </motion.p>
             

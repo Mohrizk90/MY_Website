@@ -9,9 +9,9 @@ const About = () => {
   const isInView = useInView(ref, { once: true });
 
   const stats = [
-    { number: 4, label: 'Years Experience', suffix: '+' },
-    { number: 15, label: 'Projects Completed', suffix: '+' },
-    { number: 8, label: 'Technologies Mastered', suffix: '+' }
+    { number: 5, label: 'Years Experience', suffix: '+' },
+    { number: 17, label: 'Certificates Earned', suffix: '+' },
+    { number: 10, label: 'Technologies Mastered', suffix: '+' }
   ];
 
   return (
@@ -34,12 +34,15 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p>
-              I am a dedicated Software Engineer with a strong background in AI, Machine Learning, and Full-Stack Development. 
-              With experience in both professional projects and innovative solutions, I have developed expertise in building scalable applications and AI-powered systems.
+              I am a dedicated Computer Engineer & AI Specialist with a strong background in AI, Machine Learning, and Full-Stack Development. 
+              With extensive experience in both professional projects and innovative solutions, I have developed expertise in building scalable applications and AI-powered systems.
             </p>
             <p>
               I am passionate about artificial intelligence, particularly in Natural Language Processing and Computer Vision, and always strive to 
               stay updated with the latest trends and technologies in the field of AI and software development to deliver cutting-edge solutions.
+            </p>
+            <p>
+              As a member of TEDx Organization and ALX Arabia, I am committed to continuous learning and contributing to the tech community through innovative projects and knowledge sharing.
             </p>
             
             <motion.div

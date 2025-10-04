@@ -1,0 +1,10 @@
+This is a placeholder file.
+
+To add your university logo:
+
+1. Replace this file with your actual university logo
+2. Name it: alamein-university-logo.png
+3. Make sure it's a PNG file with transparent background
+4. Recommended size: 200x200 pixels or higher
+
+The logo will automatically appear in your Education section next to the graduation icon.

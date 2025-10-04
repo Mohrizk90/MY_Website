@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -17,9 +17,15 @@ const Contact = () => {
       link: 'mailto:mohrizk90@gmail.com'
     },
     {
+      icon: FaPhone,
+      title: 'Phone',
+      value: '+20 120 222 5385',
+      link: 'tel:+201202225385'
+    },
+    {
       icon: FaMapMarkerAlt,
       title: 'Location',
-      value: 'Alamein, Egypt'
+      value: '6th of October, Giza, Egypt'
     },
     {
       icon: FaLinkedin,

@@ -13,17 +13,26 @@
 
 .education-card {
   background: #ffffff;
-  padding: 2.5rem;
+  padding: 0;
   border-radius: 16px;
   text-align: center;
   transition: all 0.3s ease;
   border: 1px solid #e5e7eb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
 .education-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
 }
 
 .education-icon {
@@ -34,10 +43,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.75rem;
   font-size: 2rem;
   color: white;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  flex-shrink: 0;
+}
+
+.education-logo {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.75rem;
+}
+
+.education-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.education-content {
+  padding: 2.5rem;
 }
 
 .education-card h3 {
@@ -68,5 +96,44 @@
 @media (max-width: 768px) {
   .education-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .education-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .education-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .education-logo {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .education-icon {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-content {
+    padding: 2rem;
+  }
+  
+  .education-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .education-logo {
+    width: 100%;
+    height: 160px;
+  }
+  
+  .education-icon {
+    font-size: 1.5rem;
   }
 } 

@@ -9,27 +9,33 @@ const Education = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
+  // Debug: Log the logo path
+  console.log('University logo path:', `${process.env.PUBLIC_URL}/logos/latest_AIU_logo.png`);
+
   const education = [
     {
       type: 'Bachelor of Computer Science',
       institution: 'Alamein International University',
-      date: '2020 - 2024',
-      field: 'Computer Science',
-      icon: FaGraduationCap
+      date: '2020 - 2025',
+      field: 'AI Science',
+      icon: FaGraduationCap,
+      logo: `${process.env.PUBLIC_URL}/logos/latest_AIU_logo.png`
     },
     {
       type: 'Embedded Systems Certification',
       institution: 'Information Technology Institute',
       date: '2024',
       field: 'Alexandria, Egypt',
-      icon: FaCertificate
+      icon: FaCertificate,
+      logo: `${process.env.PUBLIC_URL}/logos/ITI.png`
     },
     {
       type: 'Advanced Java Socket Programming',
       institution: 'Information Technology Institute',
       date: '2024',
       field: 'Alexandria, Egypt',
-      icon: FaCertificate
+      icon: FaCertificate,
+      logo: `${process.env.PUBLIC_URL}/logos/ITI.png`
     }
   ];
 
@@ -55,13 +61,31 @@ const Education = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="education-icon">
-                <edu.icon />
+              {edu.logo ? (
+                <div className="education-logo">
+                  <img 
+                    src={edu.logo} 
+                    alt={`${edu.institution} logo`}
+                    onLoad={() => console.log('University logo loaded successfully')}
+                    onError={(e) => {
+                      console.log('University logo failed to load:', edu.logo);
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                </div>
+              ) : (
+                <div className="education-header">
+                  <div className="education-icon">
+                    <edu.icon />
+                  </div>
+                </div>
+              )}
+              <div className="education-content">
+                <h3>{edu.type}</h3>
+                <h4>{edu.institution}</h4>
+                <p className="education-date">{edu.date}</p>
+                <p>{edu.field}</p>
               </div>
-              <h3>{edu.type}</h3>
-              <h4>{edu.institution}</h4>
-              <p className="education-date">{edu.date}</p>
-              <p>{edu.field}</p>
             </motion.div>
           ))}
         </div>

@@ -10,24 +10,60 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: 'Software Engineer',
-      company: 'Alamein International University',
-      date: 'July 2023 - Present',
+      title: 'AI Automation Intern',
+      company: 'AI Superheroes',
+      date: 'Sep 2025 - Present',
+      location: 'Remote',
       achievements: [
-        'Designed and developed a comprehensive course management system for university IT department using PHP, MySQL, and modern web technologies',
-        'Built scalable serverless cloud-based solutions utilizing AWS services (S3, Lambda, API Gateway) with secure IAM roles and automated deployment',
-        'Implemented backend code execution systems in Python for efficient cloud-based file management and processing'
+        'Built an AI-driven chatbot workflow in n8n integrating Google Gemini (PaLM API), Gmail, and Google Drive',
+        'Automated product search, quotations, PDF sharing, and order creation with conversational context using memory buffers',
+        'Applied API integration, workflow orchestration, and AI automation to streamline customer support and sales processes'
       ]
     },
     {
-      title: 'Embedded Systems Engineer',
-      company: 'Promed for Manufacturing',
-      date: 'April 2023 - Present',
+      title: 'Full-Stack ERP System Developer',
+      company: 'Promed for Medical Manufacturing',
+      date: '2025',
+      location: 'Remote, Cairo, Egypt',
       achievements: [
-        'Developed a complete medical incubation device from scratch using C language on Atmega processor with integrated sensors and actuators',
-        'Created comprehensive system simulations using Proteus for complete control and process automation validation',
-        'Designed and implemented a washing machine control system using Arduino (C++) with sensors, actuators, LCD, and relay integration',
-        'Conducted extensive testing and validation including edge cases like power failure recovery and system resilience'
+        'Architected and developed a comprehensive ERP system for medical device manufacturing using FastAPI (Python), React 18 with TypeScript, and PostgreSQL',
+        'Built modular backend API with SQLAlchemy ORM, JWT authentication, and RESTful endpoints supporting inventory, production planning, quality control, financial transactions, and document management',
+        'Designed responsive React frontend with Material-UI, implementing BOM (Bill of Materials), work order tracking, quality inspection workflows, and integrated financial reporting with visualizations via Recharts',
+        'Implemented automated deployment with Docker, Redis caching, Celery background tasks, and robust error handling, achieving scalable real-time architecture for concurrent users',
+        'Developed quality control module with Device History Records (DHR), non-conformance tracking, and regulatory compliance features, plus integrated Google APIs for document management and automated reporting'
+      ]
+    },
+    {
+      title: 'Full-Stack Developer (Medical E-commerce Platform)',
+      company: 'Promed for Medical Manufacturing',
+      date: 'Nov 2023 - Mar 2024',
+      location: 'Remote, Cairo, Egypt',
+      achievements: [
+        'Developed a full-stack e-commerce platform using React 17, Node.js, Express.js, and MongoDB, integrating Google Drive API for scalable cloud storage',
+        'Built a responsive application with dynamic product catalog, admin dashboard (CRUD operations), and contact management system, achieving an 85/100 production readiness score',
+        'Implemented secure authentication with JWT tokens, bcrypt password hashing, protected admin routes, and CORS configuration',
+        'Designed and deployed RESTful APIs with 15+ endpoints for product management, authentication, file uploads, and contact handling via Mongoose ODM and MongoDB Atlas',
+        'Deployed using Docker containerization and optimized pipelines on Render/Heroku/Vercel'
+      ]
+    },
+    {
+      title: 'Web, Software & Cloud Developer Intern',
+      company: 'Alamein International University',
+      date: 'Apr 2023 - Jun 2023',
+      location: 'Onsite, Alamein, Egypt',
+      achievements: [
+        'Built a web-based program for course material management using PHP, MySQL, HTML, and BLOB files',
+        'Developed a serverless cloud-based file upload solution using AWS (S3, Lambda in Python, API Gateway, IAM)'
+      ]
+    },
+    {
+      title: 'Embedded Systems Intern',
+      company: 'Promed for Medical Manufacturing',
+      date: 'Jul 2023 - Oct 2023',
+      location: 'Hybrid, Cairo, Egypt',
+      achievements: [
+        'Designed and developed a medical washing machine control system using Arduino (C++), integrating sensors, actuators, LCD, and relays',
+        'Implemented real-time feedback mechanisms and validated system reliability through edge case testing, including power failure recovery'
       ]
     }
   ];
@@ -61,6 +97,7 @@ const Experience = () => {
                 <h3>{exp.title}</h3>
                 <h4>{exp.company}</h4>
                 <p className="timeline-date">{exp.date}</p>
+                <p className="timeline-location">{exp.location}</p>
                 <ul>
                   {exp.achievements.map((achievement, idx) => (
                     <li key={idx}>{achievement}</li>
