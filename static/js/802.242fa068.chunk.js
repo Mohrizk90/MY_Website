@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmohamed_yasser_cv=self.webpackChunkmohamed_yasser_cv||[]).push([[802],{802:(e,a,s)=>{s.r(a),s.d(a,{default:()=>t});s(43);var r=s(61),i=s(579);const t=()=>(0,i.jsx)("footer",{className:"footer",children:(0,i.jsx)("div",{className:"container",children:(0,i.jsx)(r.P.p,{initial:{opacity:0},animate:{opacity:1},transition:{duration:.6},children:"\xa9 2024 Mohamed Yasser. All rights reserved."})})})}}]);
+//# sourceMappingURL=802.242fa068.chunk.js.map
