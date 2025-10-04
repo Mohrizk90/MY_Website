@@ -9,9 +9,9 @@ const About = () => {
   const isInView = useInView(ref, { once: true });
 
   const stats = [
-    { number: 3, label: 'Years Experience', suffix: '+' },
-    { number: 10, label: 'Projects Completed', suffix: '+' },
-    { number: 5, label: 'Certifications', suffix: '+' }
+    { number: 4, label: 'Years Experience', suffix: '+' },
+    { number: 15, label: 'Projects Completed', suffix: '+' },
+    { number: 8, label: 'Technologies Mastered', suffix: '+' }
   ];
 
   return (
@@ -34,12 +34,12 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p>
-              I am a dedicated Computer Science student at Alamein International University with a strong background in AI, Machine Learning, and Embedded Systems. 
-              With experience in both academic projects and professional internships, I have developed expertise in developing innovative solutions.
+              I am a dedicated Software Engineer with a strong background in AI, Machine Learning, and Full-Stack Development. 
+              With experience in both professional projects and innovative solutions, I have developed expertise in building scalable applications and AI-powered systems.
             </p>
             <p>
               I am passionate about artificial intelligence, particularly in Natural Language Processing and Computer Vision, and always strive to 
-              stay updated with the latest trends and technologies in the field of AI and software development.
+              stay updated with the latest trends and technologies in the field of AI and software development to deliver cutting-edge solutions.
             </p>
             
             <motion.div

@@ -1,5 +1,6 @@
 .experience {
-  background: #f8f9fa;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
 }
 
 .timeline {
@@ -38,10 +39,11 @@
 }
 
 .timeline-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -66,10 +68,11 @@
 }
 
 .timeline-content h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
 }
 
 .timeline-content h4 {

@@ -10,24 +10,24 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: 'Web, Software, and Cloud Developer Intern',
+      title: 'Software Engineer',
       company: 'Alamein International University',
       date: 'July 2023 - Present',
       achievements: [
-        'Designed a program to handle courses material and data on a simple website for university IT department using PHP native, MySQL, HTML, and BLOB files',
-        'Built a serverless cloud-based solution for file uploads utilizing AWS services (S3, Lambda, API Gateway) with IAM roles for secure file handling',
-        'Developed backend code execution in Python for efficient cloud-based file management'
+        'Designed and developed a comprehensive course management system for university IT department using PHP, MySQL, and modern web technologies',
+        'Built scalable serverless cloud-based solutions utilizing AWS services (S3, Lambda, API Gateway) with secure IAM roles and automated deployment',
+        'Implemented backend code execution systems in Python for efficient cloud-based file management and processing'
       ]
     },
     {
-      title: 'Embedded Systems Intern',
+      title: 'Embedded Systems Engineer',
       company: 'Promed for Manufacturing',
       date: 'April 2023 - Present',
       achievements: [
-        'Developed a medical incubation device from scratch using C language on Atmega processor, integrating sensors and actuators',
-        'Simulated the system using Proteus for complete control and process automation',
-        'Designed and developed a washing machine control system using Arduino (C++) with sensors, actuators, LCD, and relays',
-        'Conducted comprehensive testing including edge cases like power failure recovery'
+        'Developed a complete medical incubation device from scratch using C language on Atmega processor with integrated sensors and actuators',
+        'Created comprehensive system simulations using Proteus for complete control and process automation validation',
+        'Designed and implemented a washing machine control system using Arduino (C++) with sensors, actuators, LCD, and relay integration',
+        'Conducted extensive testing and validation including edge cases like power failure recovery and system resilience'
       ]
     }
   ];

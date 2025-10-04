@@ -13,7 +13,7 @@ const Education = () => {
     {
       type: 'Bachelor of Computer Science',
       institution: 'Alamein International University',
-      date: '2020 - 2025',
+      date: '2020 - 2024',
       field: 'Computer Science',
       icon: FaGraduationCap
     },

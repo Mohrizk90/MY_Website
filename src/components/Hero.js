@@ -1,14 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
+import { useScrollToSection } from '../hooks/useScrollOptimized';
 import './Hero.css';
 
-const Hero = () => {
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+const Hero = memo(() => {
+  const scrollToSection = useScrollToSection();
 
   return (
     <section id="home" className="hero">
@@ -35,7 +31,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Computer Science Student & AI Developer
+              Software Engineer & AI Developer
             </motion.p>
             
             <motion.p
@@ -44,8 +40,8 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              A passionate Computer Science student with expertise in AI, Machine Learning, and Embedded Systems. 
-              Dedicated to developing innovative solutions and continuous learning in technology.
+              A passionate Software Engineer with expertise in AI, Machine Learning, and Full-Stack Development. 
+              Dedicated to building innovative solutions and delivering high-quality software products.
             </motion.p>
             
             <motion.div
@@ -59,7 +55,7 @@ const Hero = () => {
                 className="btn btn-primary"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('#contact');
+                  scrollToSection('#contact', 80);
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -71,7 +67,7 @@ const Hero = () => {
                 className="btn btn-secondary"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('#about');
+                  scrollToSection('#about', 80);
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -96,6 +92,8 @@ const Hero = () => {
                 src={process.env.PUBLIC_URL + "/profile.jpg"} 
                 alt="Mohamed Yasser" 
                 className="profile-image"
+                loading="eager"
+                decoding="async"
               />
             </motion.div>
           </motion.div>
@@ -103,6 +101,8 @@ const Hero = () => {
       </div>
     </section>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero; 

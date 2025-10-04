@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, memo } from 'react';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { useScrollOptimized, useScrollToSection } from '../hooks/useScrollOptimized';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const scrolled = useScrollOptimized(100);
+  const scrollToSection = useScrollToSection();
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -26,11 +19,8 @@ const Navbar = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleNavClick = (href) => {
+    scrollToSection(href, 80); // Account for navbar height
     setIsOpen(false);
   };
 
@@ -63,7 +53,7 @@ const Navbar = () => {
                 className="nav-link"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection(item.href);
+                  handleNavClick(item.href);
                 }}
               >
                 {item.name}
@@ -82,6 +72,8 @@ const Navbar = () => {
       </div>
     </motion.nav>
   );
-};
+});
+
+Navbar.displayName = 'Navbar';
 
 export default Navbar; 

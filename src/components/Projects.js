@@ -12,14 +12,14 @@ const Projects = () => {
   const projects = [
     {
       title: 'Quran Recitation Assistant using AI',
-      grade: 'A',
+      status: 'Production Ready',
       description: 'AI-powered educational application that assists users in improving Quran recitation through real-time transcription and feedback. Uses Whisper ASR, Python, TTS, OpenRouter LLM, and RAG for comprehensive learning support.',
       technologies: ['Whisper ASR', 'Python', 'TTS', 'LLM', 'RAG'],
       icon: FaBrain
     },
     {
-      title: 'Facial Emotion Recognition',
-      grade: 'A',
+      title: 'Facial Emotion Recognition System',
+      status: 'Deployed',
       description: 'Fine-tuned model on FER2013 dataset using Computer Vision techniques to overcome dataset challenges. Developed a user interface for easy image upload and emotion detection with deployment capabilities.',
       technologies: ['Computer Vision', 'Deep Learning', 'FER2013', 'UI/UX'],
       icon: FaSmile
@@ -52,7 +52,7 @@ const Projects = () => {
                 <project.icon />
               </div>
               <h3>{project.title}</h3>
-              <p className="project-grade">Grade: {project.grade}</p>
+              <p className="project-grade">Status: {project.status}</p>
               <p className="project-description">{project.description}</p>
               <div className="project-tech">
                 {project.technologies.map((tech, idx) => (

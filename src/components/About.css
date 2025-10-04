@@ -1,5 +1,6 @@
 .about {
-  background: white;
+  background: #fafafa;
+  border-top: 1px solid #e5e7eb;
 }
 
 .about-content {
@@ -8,10 +9,11 @@
 }
 
 .about-text p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  margin-bottom: 1.75rem;
   color: #4b5563;
-  line-height: 1.8;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 .about-stats {
@@ -23,14 +25,17 @@
 
 .stat {
   text-align: center;
-  padding: 2rem;
-  background: #f8f9fa;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
+  padding: 2.5rem 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .stat:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .stat h3 {

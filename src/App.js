@@ -1,55 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import './App.css';
 
+// Lazy load components for better performance
+const Experience = lazy(() => import('./components/Experience'));
+const Education = lazy(() => import('./components/Education'));
+const Skills = lazy(() => import('./components/Skills'));
+const Projects = lazy(() => import('./components/Projects'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
+
+// Loading component
+const LoadingSpinner = () => (
+  <div className="loading-spinner">
+    <div className="spinner"></div>
+  </div>
+);
+
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading time
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="loading-screen">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="loading-content"
-        >
-          <h2>Mohamed Yasser</h2>
-          <p>Loading...</p>
-        </motion.div>
-      </div>
-    );
-  }
-
   return (
     <div className="App">
+      <PerformanceMonitor enabled={true} />
       <Navbar />
       <Hero />
       <About />
-      <Experience />
-      <Education />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Suspense fallback={<LoadingSpinner />}>
+        <Experience />
+        <Education />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
   );
 }
 
-export default App; 
+export default App;
