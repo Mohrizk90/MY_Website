@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -45,11 +45,6 @@ const Contact = () => {
       icon: FaGithub,
       url: 'https://github.com/Mohrizk90',
       label: 'GitHub'
-    },
-    {
-      icon: FaTwitter,
-      url: '#',
-      label: 'Twitter'
     }
   ];
 
