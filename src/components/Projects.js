@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaExternalLinkAlt, FaGithub, FaEye, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub, FaEye, FaTimes } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [selectedImage, setSelectedImage] = useState(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const projects = [
     {
@@ -48,28 +47,14 @@ const Projects = () => {
   console.log('Image path:', `${process.env.PUBLIC_URL}/projects/screen2.png`);
   console.log('PUBLIC_URL:', process.env.PUBLIC_URL);
 
-  const openImageModal = (image, projectIndex) => {
+  const openImageModal = (image) => {
     setSelectedImage(image);
-    setCurrentImageIndex(projectIndex);
   };
 
   const closeImageModal = () => {
     setSelectedImage(null);
   };
 
-  const nextImage = () => {
-    const currentProject = projects[currentImageIndex];
-    const currentImageIdx = currentProject.images.findIndex(img => img.src === selectedImage.src);
-    const nextIdx = (currentImageIdx + 1) % currentProject.images.length;
-    setSelectedImage(currentProject.images[nextIdx]);
-  };
-
-  const prevImage = () => {
-    const currentProject = projects[currentImageIndex];
-    const currentImageIdx = currentProject.images.findIndex(img => img.src === selectedImage.src);
-    const prevIdx = currentImageIdx === 0 ? currentProject.images.length - 1 : currentImageIdx - 1;
-    setSelectedImage(currentProject.images[prevIdx]);
-  };
 
   return (
     <section id="projects" className="projects">
@@ -131,7 +116,7 @@ const Projects = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.2 }}
-                    onClick={() => openImageModal(project.images[0], index)}
+                    onClick={() => openImageModal(project.images[0])}
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
