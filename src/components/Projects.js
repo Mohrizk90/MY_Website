@@ -33,7 +33,7 @@ const Projects = () => {
       technologies: ['PyTorch', 'ResNet-18', 'Bidirectional LSTM', 'Temporal Attention', 'Mixed Precision Training', 'Flask', 'OpenCV'],
       images: [
         {
-          src: `${process.env.PUBLIC_URL}/projects/screen2.png`,
+          src: `${process.env.PUBLIC_URL}/projects/UCF.png`,
           alt: 'Video Action Recognition Interface',
           title: 'Classification Interface'
         }
