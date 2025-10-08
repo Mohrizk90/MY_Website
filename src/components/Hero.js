@@ -90,7 +90,7 @@ const Hero = memo(() => {
             >
               <img 
                 src={process.env.PUBLIC_URL + "/profile.jpg"} 
-                alt="Mohamed Yasser" 
+                alt="Mohamed Rizk" 
                 className="profile-image"
                 loading="eager"
                 decoding="async"

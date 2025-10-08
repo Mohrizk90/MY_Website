@@ -37,7 +37,7 @@ const Navbar = memo(() => {
           whileHover={{ scale: 1.05 }}
           className="nav-logo"
         >
-          <a href="#home">Mohamed Yasser</a>
+          <a href="#home">Mohamed Rizk</a>
         </motion.div>
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
