@@ -13,15 +13,30 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Quran Recitation Assistant using AI',
+      title: 'RATTEL - AI-Powered Quran Recitation Assistant',
       status: 'A Grade',
-      description: 'Built an AI-powered application with Whisper ASR, Python, RAG, and LLMs for real-time Quran recitation feedback. Integrated silence detection, Arabic TTS, and interactive UI (Streamlit → React).',
-      technologies: ['Whisper ASR', 'Python', 'RAG', 'LLMs', 'Arabic TTS', 'Streamlit', 'React'],
+      description: 'Built a comprehensive AI application using Tarteel Quran Whisper model, FastAPI, and React for real-time Arabic recitation feedback and analysis. Integrated advanced speech recognition with Arabic TTS, voice activity detection, and intelligent feedback system using Gemini AI.',
+      technologies: ['Tarteel Quran Whisper', 'FastAPI', 'React', 'Arabic TTS', 'Gemini AI', 'Voice Activity Detection', 'Speech Recognition'],
       images: [
         {
           src: `${process.env.PUBLIC_URL}/projects/screen2.png`,
-          alt: 'Quran Assistant Main Interface',
+          alt: 'RATTEL Main Interface',
           title: 'Main Interface'
+        }
+      ],
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      title: 'UCF101 Video Action Recognition - CNN-RNN Deep Learning System',
+      status: 'A Grade',
+      description: 'Built a comprehensive video action recognition system using hybrid CNN-RNN architecture with ResNet-18 backbone and bidirectional LSTM, achieving 58.39% accuracy. Implemented advanced temporal attention mechanisms, progressive fine-tuning strategies, and mixed precision training.',
+      technologies: ['PyTorch', 'ResNet-18', 'Bidirectional LSTM', 'Temporal Attention', 'Mixed Precision Training', 'Flask', 'OpenCV'],
+      images: [
+        {
+          src: `${process.env.PUBLIC_URL}/projects/screen2.png`,
+          alt: 'Video Action Recognition Interface',
+          title: 'Classification Interface'
         }
       ],
       liveUrl: '#',

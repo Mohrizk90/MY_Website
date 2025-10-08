@@ -21,39 +21,13 @@ const Experience = () => {
       ]
     },
     {
-      title: 'Full-Stack ERP System Developer',
-      company: 'Promed for Medical Manufacturing',
-      date: '2025',
-      location: 'Remote, Cairo, Egypt',
-      achievements: [
-        'Architected and developed a comprehensive ERP system for medical device manufacturing using FastAPI (Python), React 18 with TypeScript, and PostgreSQL',
-        'Built modular backend API with SQLAlchemy ORM, JWT authentication, and RESTful endpoints supporting inventory, production planning, quality control, financial transactions, and document management',
-        'Designed responsive React frontend with Material-UI, implementing BOM (Bill of Materials), work order tracking, quality inspection workflows, and integrated financial reporting with visualizations via Recharts',
-        'Implemented automated deployment with Docker, Redis caching, Celery background tasks, and robust error handling, achieving scalable real-time architecture for concurrent users',
-        'Developed quality control module with Device History Records (DHR), non-conformance tracking, and regulatory compliance features, plus integrated Google APIs for document management and automated reporting'
-      ]
-    },
-    {
       title: 'Full-Stack Developer (Medical E-commerce Platform)',
       company: 'Promed for Medical Manufacturing',
       date: 'Nov 2023 - Mar 2024',
       location: 'Remote, Cairo, Egypt',
       achievements: [
-        'Developed a full-stack e-commerce platform using React 17, Node.js, Express.js, and MongoDB, integrating Google Drive API for scalable cloud storage',
-        'Built a responsive application with dynamic product catalog, admin dashboard (CRUD operations), and contact management system, achieving an 85/100 production readiness score',
-        'Implemented secure authentication with JWT tokens, bcrypt password hashing, protected admin routes, and CORS configuration',
-        'Designed and deployed RESTful APIs with 15+ endpoints for product management, authentication, file uploads, and contact handling via Mongoose ODM and MongoDB Atlas',
-        'Deployed using Docker containerization and optimized pipelines on Render/Heroku/Vercel'
-      ]
-    },
-    {
-      title: 'Web, Software & Cloud Developer Intern',
-      company: 'Alamein International University',
-      date: 'Apr 2023 - Jun 2023',
-      location: 'Onsite, Alamein, Egypt',
-      achievements: [
-        'Built a web-based program for course material management using PHP, MySQL, HTML, and BLOB files',
-        'Developed a serverless cloud-based file upload solution using AWS (S3, Lambda in Python, API Gateway, IAM)'
+        'Built a production-ready full-stack e-commerce platform using React 17, Node.js, Express.js, MongoDB, integrating Cloudinary for cloud storage and deploying via Docker on Render with 85/100 production readiness score',
+        'Implemented secure JWT authentication, comprehensive admin dashboard with CRUD operations, and 26+ RESTful API endpoints, featuring multi-language support (EN/AR), responsive design, and professional medical UI/UX'
       ]
     },
     {
@@ -64,6 +38,16 @@ const Experience = () => {
       achievements: [
         'Designed and developed a medical washing machine control system using Arduino (C++), integrating sensors, actuators, LCD, and relays',
         'Implemented real-time feedback mechanisms and validated system reliability through edge case testing, including power failure recovery'
+      ]
+    },
+    {
+      title: 'Web, Software & Cloud Developer Intern',
+      company: 'Alamein International University',
+      date: 'Apr 2023 - Jun 2023',
+      location: 'Onsite, Alamein, Egypt',
+      achievements: [
+        'Built a web-based program for course material management using PHP, MySQL, HTML, and BLOB files',
+        'Developed a serverless cloud-based file upload solution using AWS (S3, Lambda in Python, API Gateway, IAM)'
       ]
     }
   ];
