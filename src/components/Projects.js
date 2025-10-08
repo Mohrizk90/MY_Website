@@ -18,7 +18,7 @@ const Projects = () => {
       technologies: ['Tarteel Quran Whisper', 'FastAPI', 'React', 'Arabic TTS', 'Gemini AI', 'Voice Activity Detection', 'Speech Recognition'],
       images: [
         {
-          src: `${process.env.PUBLIC_URL}/projects/screen2.png`,
+          src: `${process.env.PUBLIC_URL}/projects/RATTEL.png`,
           alt: 'RATTEL Main Interface',
           title: 'Main Interface'
         }
