@@ -9,7 +9,7 @@ const About = () => {
   const isInView = useInView(ref, { once: true });
 
   const stats = [
-    { number: 5, label: 'Years Experience', suffix: '+' },
+    { number: 2, label: 'Years Experience', suffix: '+' },
     { number: 17, label: 'Certificates Earned', suffix: '+' },
     { number: 10, label: 'Technologies Mastered', suffix: '+' }
   ];
@@ -35,7 +35,7 @@ const About = () => {
           >
             <p>
               I am a dedicated Computer Engineer & AI Specialist with a strong background in AI, Machine Learning, and Full-Stack Development. 
-              With extensive experience in both professional projects and innovative solutions, I have developed expertise in building scalable applications and AI-powered systems.
+              With hands-on experience in both professional projects and innovative solutions, I have developed expertise in building scalable applications and AI-powered systems.
             </p>
             <p>
               I am passionate about artificial intelligence, particularly in Natural Language Processing and Computer Vision, and always strive to 
