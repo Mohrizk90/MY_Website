@@ -258,7 +258,6 @@ const Certificates = memo(() => {
               <div className="certificate-info">
                 <h3 className="certificate-title">{certificate.title}</h3>
                 <p className="certificate-issuer">{certificate.issuer}</p>
-                <span className="certificate-date">{certificate.date}</span>
                 <span className="certificate-category">{certificate.category}</span>
               </div>
             </motion.div>
@@ -322,7 +321,6 @@ const Certificates = memo(() => {
               <div className="modal-info">
                 <h3>{selectedCertificate.title}</h3>
                 <p><strong>Issuer:</strong> {selectedCertificate.issuer}</p>
-                <p><strong>Date:</strong> {selectedCertificate.date}</p>
                 <p><strong>Category:</strong> {selectedCertificate.category}</p>
               </div>
             </motion.div>

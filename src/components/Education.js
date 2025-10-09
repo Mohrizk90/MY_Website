@@ -24,7 +24,7 @@ const Education = () => {
     {
       type: 'Embedded Systems Certification',
       institution: 'Information Technology Institute',
-      date: '2024',
+      date: '',
       field: 'Alexandria, Egypt',
       icon: FaCertificate,
       logo: `${process.env.PUBLIC_URL}/logos/ITI.png`
@@ -32,7 +32,7 @@ const Education = () => {
     {
       type: 'Advanced Java Socket Programming',
       institution: 'Information Technology Institute',
-      date: '2024',
+      date: '',
       field: 'Alexandria, Egypt',
       icon: FaCertificate,
       logo: `${process.env.PUBLIC_URL}/logos/ITI.png`
@@ -83,7 +83,7 @@ const Education = () => {
               <div className="education-content">
                 <h3>{edu.type}</h3>
                 <h4>{edu.institution}</h4>
-                <p className="education-date">{edu.date}</p>
+                {edu.date && <p className="education-date">{edu.date}</p>}
                 <p>{edu.field}</p>
               </div>
             </motion.div>
