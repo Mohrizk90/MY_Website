@@ -31,7 +31,7 @@ const Hero = memo(() => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Computer Engineer & AI Specialist
+              AI Specialist and Product Engineer
             </motion.p>
             
             <motion.p
@@ -40,8 +40,8 @@ const Hero = memo(() => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              A passionate Computer Engineer with expertise in AI, Machine Learning, and Full-Stack Development. 
-              Dedicated to building innovative solutions and delivering high-quality software products.
+              A passionate AI Specialist and Product Engineer with expertise in AI, Machine Learning, and Full-Stack Development. 
+              Dedicated to building innovative AI-powered solutions and delivering high-quality software products.
             </motion.p>
             
             <motion.div

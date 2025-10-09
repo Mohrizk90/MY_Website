@@ -34,7 +34,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p>
-              I am a dedicated Computer Engineer & AI Specialist with a strong background in AI, Machine Learning, and Full-Stack Development. 
+              I am a dedicated AI Specialist and Product Engineer with a strong background in AI, Machine Learning, and Full-Stack Development. 
               With hands-on experience in both professional projects and innovative solutions, I have developed expertise in building scalable applications and AI-powered systems.
             </p>
             <p>
