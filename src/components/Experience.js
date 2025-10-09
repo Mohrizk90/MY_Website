@@ -14,6 +14,7 @@ const Experience = () => {
       company: 'AI Superheroes',
       date: 'Sep 2025 - Present',
       location: 'Remote',
+      logo: `${process.env.PUBLIC_URL}/logos/ai-superheroes.png`,
       achievements: [
         'Built an AI-driven chatbot workflow in n8n integrating Google Gemini (PaLM API), Gmail, and Google Drive',
         'Automated product search, quotations, PDF sharing, and order creation with conversational context using memory buffers',
@@ -25,6 +26,7 @@ const Experience = () => {
       company: 'Promed for Medical Manufacturing',
       date: 'Nov 2023 - Mar 2024',
       location: 'Remote, Cairo, Egypt',
+      logo: `${process.env.PUBLIC_URL}/logos/promed.png`,
       achievements: [
         'Built a production-ready full-stack e-commerce platform using React 17, Node.js, Express.js, MongoDB, integrating Cloudinary for cloud storage and deploying via Docker on Render with 85/100 production readiness score',
         'Implemented secure JWT authentication, comprehensive admin dashboard with CRUD operations, and 26+ RESTful API endpoints, featuring multi-language support (EN/AR), responsive design, and professional medical UI/UX'
@@ -35,6 +37,7 @@ const Experience = () => {
       company: 'Promed for Medical Manufacturing',
       date: 'Jul 2023 - Oct 2023',
       location: 'Hybrid, Cairo, Egypt',
+      logo: `${process.env.PUBLIC_URL}/logos/promed.png`,
       achievements: [
         'Designed and developed a medical washing machine control system using Arduino (C++), integrating sensors, actuators, LCD, and relays',
         'Implemented real-time feedback mechanisms and validated system reliability through edge case testing, including power failure recovery'
@@ -45,6 +48,7 @@ const Experience = () => {
       company: 'Alamein International University',
       date: 'Apr 2023 - Jun 2023',
       location: 'Onsite, Alamein, Egypt',
+      logo: `${process.env.PUBLIC_URL}/logos/latest_AIU_logo.png`,
       achievements: [
         'Built a web-based program for course material management using PHP, MySQL, HTML, and BLOB files',
         'Developed a serverless cloud-based file upload solution using AWS (S3, Lambda in Python, API Gateway, IAM)'
@@ -78,8 +82,25 @@ const Experience = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <h3>{exp.title}</h3>
-                <h4>{exp.company}</h4>
+                <div className="timeline-header">
+                  <div className="company-logo">
+                    <img 
+                      src={exp.logo} 
+                      alt={`${exp.company} logo`}
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                    <div className="logo-placeholder" style={{ display: 'none' }}>
+                      <span>{exp.company.charAt(0)}</span>
+                    </div>
+                  </div>
+                  <div className="timeline-title-info">
+                    <h3>{exp.title}</h3>
+                    <h4>{exp.company}</h4>
+                  </div>
+                </div>
                 <p className="timeline-date">{exp.date}</p>
                 <p className="timeline-location">{exp.location}</p>
                 <ul>
