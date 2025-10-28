@@ -12,6 +12,21 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'PROMED - Medical Equipment E-commerce Website',
+      status: 'Deployed',
+      description: 'A professional medical equipment e-commerce website with comprehensive admin panel for product management. Features include product catalog with detailed specifications, admin panel to manage products and gallery, contact form with email notifications, image gallery for equipment display, and fully responsive design optimized for medical equipment sales.',
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Cloudinary', 'Render'],
+      images: [
+        {
+          src: `${process.env.PUBLIC_URL}/projects/Promed_website.png`,
+          alt: 'PROMED Medical Equipment Website',
+          title: 'E-commerce Interface'
+        }
+      ],
+      liveUrl: 'https://promedeg.onrender.com',
+      githubUrl: '#'
+    },
+    {
       title: 'RATTEL - AI-Powered Quran Recitation Assistant',
       status: 'A Grade',
       description: 'Built a comprehensive AI application using Tarteel Quran Whisper model, FastAPI, and React for real-time Arabic recitation feedback and analysis. Integrated advanced speech recognition with Arabic TTS, voice activity detection, and intelligent feedback system using Gemini AI.',
@@ -83,6 +98,40 @@ const Projects = () => {
                     <h3>{project.title}</h3>
                     <span className="project-status">{project.status}</span>
                   </div>
+
+                  {project.images && project.images.length > 0 && (
+                    <motion.div
+                      className="project-gallery"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                      transition={{ duration: 0.4, delay: 0.2 + index * 0.2 }}
+                      onClick={() => openImageModal(project.images[0])}
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <img
+                        src={project.images[0].src}
+                        alt={project.images[0].alt}
+                        loading="lazy"
+                        onLoad={(e) => {
+                          console.log('Image loaded successfully:', project.images[0].src);
+                          e.target.nextSibling.style.display = 'none';
+                        }}
+                        onError={(e) => {
+                          console.log('Image failed to load:', project.images[0].src);
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div className="gallery-placeholder">
+                        <FaEye />
+                        <span>Loading Screenshot...</span>
+                      </div>
+                      <div className="gallery-overlay">
+                        <FaEye />
+                        <span>{project.images[0].title}</span>
+                      </div>
+                    </motion.div>
+                  )}
                   
                   <p className="project-description">{project.description}</p>
                   
@@ -109,40 +158,6 @@ const Projects = () => {
                     )}
                   </div>
                 </div>
-
-                {project.images && project.images.length > 0 && (
-                  <motion.div
-                    className="project-gallery"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.4, delay: 0.3 + index * 0.2 }}
-                    onClick={() => openImageModal(project.images[0])}
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <img
-                      src={project.images[0].src}
-                      alt={project.images[0].alt}
-                      loading="lazy"
-                      onLoad={(e) => {
-                        console.log('Image loaded successfully:', project.images[0].src);
-                        e.target.nextSibling.style.display = 'none';
-                      }}
-                      onError={(e) => {
-                        console.log('Image failed to load:', project.images[0].src);
-                        e.target.style.display = 'none';
-                        e.target.nextSibling.style.display = 'flex';
-                      }}
-                    />
-                    <div className="gallery-placeholder">
-                      <FaEye />
-                      <span>Loading Screenshot...</span>
-                    </div>
-                    <div className="gallery-overlay">
-                      <FaEye />
-                      <span>{project.images[0].title}</span>
-                    </div>
-                  </motion.div>
-                )}
               </div>
             </motion.div>
           ))}
