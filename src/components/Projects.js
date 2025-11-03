@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaExternalLinkAlt, FaGithub, FaEye, FaTimes } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub, FaEye, FaTimes, FaFileAlt, FaCertificate, FaTrophy } from 'react-icons/fa';
+import { useScrollToSection } from '../hooks/useScrollOptimized';
 import './Projects.css';
 
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [selectedImage, setSelectedImage] = useState(null);
+  const scrollToSection = useScrollToSection();
 
   const projects = [
     {
@@ -39,7 +41,8 @@ const Projects = () => {
         }
       ],
       liveUrl: '#',
-      githubUrl: '#'
+      githubUrl: '#',
+      hasConferenceCert: true
     },
     {
       title: 'UCF101 Video Action Recognition - CNN-RNN Deep Learning System',
@@ -51,6 +54,21 @@ const Projects = () => {
           src: `${process.env.PUBLIC_URL}/projects/UCF.png`,
           alt: 'Video Action Recognition Interface',
           title: 'Classification Interface'
+        }
+      ],
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      title: 'Smart Pharmacy Automation System - AI-Powered Inquiry Handler',
+      status: 'Completed',
+      description: 'Developed a smart automation system using n8n, Google Gemini AI, Gmail, and Google Drive to handle pharmacy product inquiries. The system auto-responds to users, analyzes messages via AI, sends PDFs and price quotes, and creates orders automatically. It maintains conversation context per user and integrates with external APIs (e.g., WhatsApp). Fully hands-free, scalable, and ideal for customer service, sales, or product ordering workflows.',
+      technologies: ['n8n', 'JavaScript', 'API Integration', 'AI Agent Development', 'Google Gemini AI', 'Gmail API', 'Google Drive API'],
+      images: [
+        {
+          src: `${process.env.PUBLIC_URL}/projects/Flow1.png`,
+          alt: 'Smart Pharmacy Automation System Flow',
+          title: 'Automation Workflow'
         }
       ],
       liveUrl: '#',
@@ -156,7 +174,36 @@ const Projects = () => {
                         GitHub
                       </a>
                     )}
+                    {(project.hasResearchPaper || project.hasConferenceCert) && (
+                      <a 
+                        href="#achievements" 
+                        className="project-link project-link-achievement"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          scrollToSection('#achievements', 80);
+                        }}
+                      >
+                        <FaTrophy />
+                        View Achievements
+                      </a>
+                    )}
                   </div>
+                  {(project.hasResearchPaper || project.hasConferenceCert) && (
+                    <div className="project-achievements-info">
+                      {project.hasResearchPaper && (
+                        <span className="achievement-badge">
+                          <FaFileAlt />
+                          Research Paper Published
+                        </span>
+                      )}
+                      {project.hasConferenceCert && (
+                        <span className="achievement-badge">
+                          <FaCertificate />
+                          Conference Participation
+                        </span>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
